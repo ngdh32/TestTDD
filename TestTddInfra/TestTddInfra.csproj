@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.102.31" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Ini" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestTddCore\TestTddCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\EF\" />
+    <None Remove="Entities\DynamoDb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\EF\" />
+    <Folder Include="Entities\DynamoDb\" />
+  </ItemGroup>
+</Project>

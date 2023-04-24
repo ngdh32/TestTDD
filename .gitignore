@@ -1,0 +1,16 @@
+TestTddInfra/obj
+TestTddInfra/bin
+TestTddInfra/properties
+TestTddCore/bin
+TestTddCore/obj
+TestTddCore/properties
+TestTddUnitTest/bin
+TestTddUnitTest/obj
+TestTddUnitTest/properties
+TestTDDWebApi/.vs
+TestTDDWebApi/TestTddApi/bin
+TestTDDWebApi/TestTddApi/obj
+TestTDDWebApi/TestTddApi/properties
+TestTDDWebApi/TestTddIntegrationTest/bin
+TestTDDWebApi/TestTddIntegrationTest/obj
+TestTDDWebApi/TestTddIntegrationTest/properties
