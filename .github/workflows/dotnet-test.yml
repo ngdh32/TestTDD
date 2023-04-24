@@ -15,7 +15,7 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet restore ./TestTDDWebApi/TestTddApi/TestTddApi.csproj
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
