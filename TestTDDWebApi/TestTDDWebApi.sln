@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTddApi", "TestTddApi\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTddIntegrationTest", "TestTddIntegrationTest\TestTddIntegrationTest.csproj", "{4FC29C44-8F03-49DF-B9BC-B15137E590CE}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3A2E5F8A-CA15-41B1-AB8F-E13301E1A5A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4FC29C44-8F03-49DF-B9BC-B15137E590CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FC29C44-8F03-49DF-B9BC-B15137E590CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FC29C44-8F03-49DF-B9BC-B15137E590CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A2E5F8A-CA15-41B1-AB8F-E13301E1A5A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A2E5F8A-CA15-41B1-AB8F-E13301E1A5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A2E5F8A-CA15-41B1-AB8F-E13301E1A5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A2E5F8A-CA15-41B1-AB8F-E13301E1A5A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

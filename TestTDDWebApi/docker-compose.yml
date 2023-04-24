@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  testtddapi:
+    image: ${DOCKER_REGISTRY-}testtddapi
+    build:
+      context: .
+      dockerfile: TestTddApi/Dockerfile
