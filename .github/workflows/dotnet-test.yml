@@ -19,4 +19,4 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore ./TestTDDWebApi/TestTddApi/TestTddApi.csproj
       - name: Test
-        run: dotnet test --no-restore --verbosity normal ./TestTddCoreUnitTest.cs
+        run: dotnet test --no-restore --verbosity normal ./TestTddUnitTest/TestTddCoreUnitTest.csproj
