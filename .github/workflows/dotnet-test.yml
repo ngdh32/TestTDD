@@ -17,6 +17,6 @@ jobs:
       - name: Install dependencies
         run: dotnet restore ./TestTDDWebApi/TestTddApi/TestTddApi.csproj
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build --configuration Release --no-restore ./TestTDDWebApi/TestTddApi/TestTddApi.csproj
       - name: Test
         run: dotnet test --no-restore --verbosity ./TestTddCoreUnitTest.cs
