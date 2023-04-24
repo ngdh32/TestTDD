@@ -3,17 +3,17 @@ name: dotnet package
 on: [push]
 
 env:
-  dotnet-version: 6.0.x
+  DOTNET_VERSION: 6.0.x
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup .NET Core SDK ${{ $dotnet-version }}
+      - name: Setup .NET Core SDK ${{ $DOTNET_VERSION }}
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: ${{ $dotnet-version }}
+          dotnet-version: ${{ $DOTNET_VERSION }}
       - name: Install dependencies
         run: dotnet restore
       - name: Build
