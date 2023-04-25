@@ -62,8 +62,8 @@ namespace TestTddInfra
             {
                 Region = Amazon.RegionEndpoint.USEast1
             };
-            var accessKey = Environment.GetEnvironmentVariable("AWS_ACCESS_KEY_ID");
-            var accessSecretKey = Environment.GetEnvironmentVariable("AWS_SECRET_ACCESS_KEY");
+            var accessKey = Environment.GetEnvironmentVariable("DYNAMO_ACCESS_KEY_ID");
+            var accessSecretKey = Environment.GetEnvironmentVariable("DYNAMO_SECRET_ACCESS_KEY");
             awsOptions.Credentials = new BasicAWSCredentials(accessKey, accessSecretKey);
 
             service.AddDefaultAWSOptions(awsOptions);

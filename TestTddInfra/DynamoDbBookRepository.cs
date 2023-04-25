@@ -53,12 +53,64 @@ namespace TestTddInfra
 
         public Book GetBook(int id)
         {
-            throw new NotImplementedException();
+            var request = new GetItemRequest
+            {
+                TableName = _bookTableName,
+                Key = new Dictionary<string, AttributeValue>()
+                {
+                    {
+                        "Id", new AttributeValue
+                        {
+                            N = $"{id}"
+                        }
+                    }
+                }
+            };
+
+            var response = _client.GetItemAsync(request).Result;
+
+            if (response.HttpStatusCode != System.Net.HttpStatusCode.OK)
+            {
+                return null;
+            }
+
+            var result = response.Item;
+            return new Book
+            {
+                Id = Convert.ToInt32(result["Id"].N),
+                Title = result["Title"].S,
+                AuthorId = Convert.ToInt32(result["AuthorId"].N),
+                CreateDate = Convert.ToDateTime(result["CreateDate"].S)
+            };
         }
 
         public List<Book> GetBooks()
         {
-            throw new NotImplementedException();
+            var request = new ScanRequest
+            {
+                TableName = _bookTableName
+            };
+
+            var response = _client.ScanAsync(request).Result;
+
+            if (response.HttpStatusCode != System.Net.HttpStatusCode.OK)
+            {
+                return null;
+            }
+
+            var result = new List<Book>();
+            foreach(var item in response.Items)
+            {
+                result.Add(new Book
+                {
+                    Id = Convert.ToInt32(item["Id"].N),
+                    Title = item["Title"].S,
+                    AuthorId = Convert.ToInt32(item["AuthorId"].N),
+                    CreateDate = Convert.ToDateTime(item["CreateDate"].S)
+                });
+            }
+
+            return result;
         }
     }
 }
